@@ -4,18 +4,18 @@
 /* Create a function that returns random answer out of: rock, paper, scissors  
 This will be for the computers turn */ 
     function getComputerChoice () { 
-        /* Generate a random number  */ 
+/* Generate a random number  */ 
         number = Math.floor(Math.random() * 100 + 1)
-        /*  assign random number to a choice */
+/*  assign random number to a choice */
         if (number >= 1 && number <= 33 ) {computerChoice = "rock"}
         else if (number >= 34 && number <= 66) {computerChoice = "paper"}
         else if (number >= 67 && number <= 100) {computerChoice = "scissors"} 
     }
 /* create a function to get player input  */ 
     function getPlayerChoice () {
-        /* stores player input as a variable and makes lower case to be case sensitive */
+/* stores player input as a variable and makes lower case to be case sensitive */
         playerChoice = (prompt("Please pick: rock, paper, or scissors")).toLowerCase()
-        /* this if statement ensures only rock, paper, or scissors is passed as variable */
+ /* this if statement ensures only rock, paper, or scissors is passed as variable */
         if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {}
         else {notValid = alert ("This is not a valid option")}
     }
@@ -30,14 +30,14 @@ This will be for the computers turn */
             else if (playerChoice === "rock" && computerChoice === "paper") {return outcome = 2, console.log("You lose! paper beats rock!")}
             else if (playerChoice === "scissors" && computerChoice === "paper" ) {return outcome = 1, console.log("You win! scissors beats paper!")}
             else if (playerChoice === "paper" && computerChoice === "scissors") {return outcome = 2,  console.log("You lose! scissors beats paper!")}
-            /* These two lines dictate that if the game is a tie or if the player choice is not valid, the game runs again */
+            /* These two else if statements dictate that if the game is a tie or if the player choice is not valid, the game runs again */
             else if (playerChoice === "rock" && computerChoice === "rock" ||
                      playerChoice === "paper" && computerChoice === "paper" ||
                      playerChoice === "scissors" && computerChoice === "scissors") {console.log("Its a tie!"), playRockPaperScissors()}
             else {playRockPaperScissors()}
 
         }
-    /* create function that executes 5 game rounds and decides a winner based on who wins the most that also does not include the ties or not valid options*/
+ /* create function that executes 5 game rounds and decides a winner based on who wins the most that also does not include the ties or not valid options*/
     function game () {
         let playerScore = 0;
         let computerScore = 0;
