@@ -1,4 +1,4 @@
-/* Initialize two choice variables to be used compared later on */
+/* Initialize two choice variables to be compared later on */
     let computerChoice;
     let playerChoice;
 /* Create a function that returns random answer out of: rock, paper, scissors  
@@ -13,7 +13,7 @@ This will be for the computers turn */
     }
 /* create a function to get player input  */ 
     function getPlayerChoice () {
-/* stores player input as a variable and makes lower case to be case sensitive */
+/* stores player input as a variable and makes lower case to be case insensitive */
         playerChoice = (prompt("Please pick: rock, paper, or scissors")).toLowerCase()
  /* this if statement ensures only rock, paper, or scissors is passed as variable */
         if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {}
