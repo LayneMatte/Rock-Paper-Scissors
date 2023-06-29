@@ -22,6 +22,7 @@ body {
     justify-content: center;
     margin-left: 30%;
     margin-right: 30%;
+    margin-bottom: -5%;
     text-shadow: 2px 2px black;
     text-decoration: wavy;
     width: 600px;
@@ -41,12 +42,11 @@ body {
     justify-content: space-around;
     margin-left: 20%;
     margin-right: 20%;
+    margin-bottom: -5%;
 }
 .choices {
     font-weight: 600;
     background-color: black;
-    margin-left: -10%;
-    margin-right: -10%;
     padding: 10px;
     border-color: lightgray;
     border-style: groove;
@@ -81,14 +81,36 @@ img {
     75% { transform: rotate(-5deg) scale(1.2);}
     100% { transform: rotate(0deg) scale(1.2);  }
   }
+
+@keyframes greenGrow {
+    0% {transform:  scale(1.); background-color: lightgray; }
+    25% {transform: scale(1.05); background-color: green; }
+    50% {transform: scale(1.1); background-color: green; }
+    75% {transform: scale(1.05); background-color: green;}
+    100% {transform: scale(1.0); background-color: lightgray; }
+}
+
+@keyframes redGrow {
+    0% {transform:  scale(1.); background-color: lightgray; }
+    25% {transform: scale(1.05); background-color: red; }
+    50% {transform: scale(1.1); background-color: red; }
+    75% {transform: scale(1.05); background-color: red;}
+    100% {transform: scale(1.0); background-color: lightgray; }
+}
+
+@keyframes yellowGrow {
+    0% {transform:  scale(1.); background-color: lightgray; }
+    25% {transform: scale(1.05); background-color: yellow; }
+    50% {transform: scale(1.1); background-color: yellow; }
+    75% {transform: scale(1.05); background-color: yellow;}
+    100% {transform: scale(1.0); background-color: lightgray; }
+}
+
 button:hover {
     animation: tilt-shaking 1.4s infinite;
     animation-timing-function: ease-in;
 }
 
-.outcome {
-    text-align: center;
-}
 
 .footer {
     display: flex;
@@ -99,6 +121,37 @@ button:hover {
     background-color: darkgray;
     margin-top: 0px;
     padding-top: 6px;
-
 }
+
+.counter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    gap: 100px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5%;
+}
+.player-counter,.comp-counter {
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 4px black ridge;
+    padding: 3px;
+}
+
+.outcome-container {
+    font-size: 55px;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: space-evenly;
+}
+
 
